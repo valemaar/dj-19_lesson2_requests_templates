@@ -3,6 +3,9 @@ import datetime
 from django.shortcuts import render
 from django.http import HttpResponse
 
+
+CONTEXT = [str(i) for i in range(1000)]
+
 # def info_view(request, year, month, day):
 #     # none_result = 'Данных по пользователю нет'
 #     # data = {
@@ -44,4 +47,5 @@ def info_view(request):
         'users': [user_1, user_2]
     }
 
-    return render(request, 'app/index.html', context)
+    return render(request, 'app/templates/app/index.html', context)
+

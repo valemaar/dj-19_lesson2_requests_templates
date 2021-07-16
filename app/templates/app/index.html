@@ -7,7 +7,12 @@
 <body>
     <h1>{{ info }}</h1>
     {% for user in users %}
-        <p>{{ user.name - user.age }}</p>
-    {% endfor %}
+        {% if user.age > 29 %}
+            <p>{{ user.info }}</p>
+
+        {% elif %}
+            <p>{{ user.info }}</p>
+        {% endif %}
+    {% end for %}
 </body>
 </html>
